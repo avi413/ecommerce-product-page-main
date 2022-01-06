@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="body">
+<hrader class="header">
+  <div class="header_menu">
+    <img class="header__mobile-menu" src="./images/icon-menu.svg" alt="menu">
+    <img class="logo" src="./images/logo.svg" alt="logo">
+  <nav class="nav">
+    <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="#">Collections</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Men</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Women</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">About</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+    <div class="profile">
+      <img class="profile__cart" src="./images/icon-cart.svg" alt="cart" >
+      <img class="profile__avatar" src="./images/image-avatar.png" alt="avatar">
+    </div>
+</hrader>
+<main class="main">
+  <section class="product">
+    <div class="img-box">
+      <div class="galery">
+        <ul class="galery__list">
+          <li class="galery__item_main"><img src="./images/image-product-1.jpg" alt="" class="galery__img_main"></li>
+          <li class="galery__item2"><img src="./images/image-product-1-thumbnail.jpg" alt="" class="galery__thumbnail"></li>
+          <li class="galery__item"><img src="./images/image-product-2-thumbnail.jpg" alt="" class="galery__thumbnail"></li>
+          <li class="galery__item"><img src="./images/image-product-3-thumbnail.jpg" alt="" class="galery__thumbnail"></li>
+          <li class="galery__item"><img src="./images/image-product-4-thumbnail.jpg" alt="" class="galery__thumbnail"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="data-box">
+         <p class="product__company">SNEAKER COMPANY</p>
+         <h1 class="product__name">Fall Limited Edition Sneakers</h1>
+         <p class="product_desc">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+         <div class="product__price-area">
+           <div class="product__sale-price">150$<span class="product__dicount">50%</span></div>
+           <div class="product__price">250$</div>
+           
+         </div>
+         <div class="product__buttons">
+           <div class="product__quantity">
+            <span class="product__quantity-minus"><img class="product__quantity_img" src="./images/icon-minus.svg" alt=""></span> 
+            <input class="product__quantity product__quantity_input" type="number" name="quantity" id="quantity" value="1">
+            <span class="product__quantity-plus"><img class="product__quantity_img" src="./images/icon-plus.svg" alt=""></span>
+            
+           </div>
+          
+           <input class="product__add-btn" type="button" value="Add to cart">
+         </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="footer__attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Avi Dalal</a>.
+  </div>
+</footer>
+<script src="./js/script.js"></script>
+</body>
+</html>

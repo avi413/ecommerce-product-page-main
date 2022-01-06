@@ -1,0 +1,213 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --Orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+    --ff-primary: "Kumbh Sans", sans-serif;
+    --font-size-main: 16px;
+    --very-vark-blue: hsl(220, 13%, 13%);
+    --dark-grayish-blue: hsl(219, 9%, 45%);
+    --grayish-blue: hsl(220, 14%, 75%);
+    --light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black:hsl(0, 0%, 0%);
+}
+
+/* CSS Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+    font-family: var(--ff-primary);
+    font-size: var(--font-size-main);
+    max-width: 1140px;
+    margin: auto;
+}
+
+@media screen and (max-width: 1440px) {
+    .body {
+        margin: 0 30px;
+    } 
+}
+.header {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 30px;
+    border-bottom: 1px solid var(--grayish-blue);
+}
+@media screen and (max-width: 800px) {
+    .header {
+        margin: 0;
+        padding: 20px 0;
+        align-items: center;
+        border-bottom: 0px;
+        
+    } 
+}
+.header_menu {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.header__mobile-menu {
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    .header_menu {
+        gap: 20px;
+    }  
+    .header__mobile-menu {
+        display: block;
+        align-self: end;
+    } 
+}
+.nav__list {
+    display: flex;
+    margin: auto;
+    list-style: none;
+    gap: 25px;
+    color: var(--grayish-blue);
+}
+
+@media screen and (max-width: 800px) {
+    .nav__list {
+        display:none;
+    }   
+}
+
+.logo {
+    margin-bottom: 60px;
+    margin-top: 0;
+}
+@media screen and (max-width: 800px) {
+    .logo {
+        margin: 0;
+    } 
+}
+.nav__link {
+    padding-bottom: calc(60px - 3px);
+    text-decoration: none;    
+}
+
+.nav__link:hover {
+    color: var(--Black);
+    font-weight: 700;
+    border-bottom: 3px solid var(--Orange);
+}
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 0;
+}
+
+.profile__avatar {
+    width: 50px;
+    border: 3px solid var(--Orange);
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 800px) {
+    .profile__avatar {
+        border: 0px;
+        width: 25px;
+    } 
+}
+.product {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 100px;
+    margin: 100px 50px 0;
+}
+
+.galery__list {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
+    justify-content: start;
+    list-style: none;
+    gap: 20px;
+}
+.galery__item_main {
+    grid-column: 1 / 5;
+    grid-row: 1 / 4;
+}
+.galery__img_main{
+    max-width: 400px; 
+    border-radius: 10px;
+}
+.galery__thumbnail {
+    max-width: 80px;
+    border-radius: 10px;
+}
+
+.data-box {
+    display: grid;
+    align-content: center;
+    gap: 30px;
+    max-width:  433px;
+}
+
+.product__company {
+    color: var(--Orange);
+}
+
+.product__name {
+    font-size: 34px;
+}
+
+.product__price-area {
+    display: flex;
+}
+
+.product__buttons {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 10px
+}
+
+.product__quantity {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100%;
+    border: none;
+    background-color: var(--light-grayish-blue);
+    text-align: center;
+    font-weight: 700;
+    border-radius:10px
+}
+
+.product__quantity-plus {
+    margin:  auto 0 auto;
+}
+
+.product__quantity-minus {
+    margin:  auto 0 auto;
+    height: 25px;
+}
+
+.product__quantity_input::-webkit-inner-spin-button, 
+.product__quantity_input::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+.product__add-btn {
+    background-color: var(--Orange);
+    border: none;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.footer__attribution { font-size: 11px; text-align: center; }
+.footer__attribution a { color: hsl(228, 45%, 44%); }
