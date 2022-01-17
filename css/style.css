@@ -28,6 +28,7 @@
     font-size: var(--font-size-main);
     max-width: 1140px;
     margin: auto;
+    position: relative;
 }
 
 @media screen and (max-width: 1440px) {
@@ -35,12 +36,23 @@
         margin: 0 30px;
     } 
 }
+
+.btn {
+    background-color: var(--Orange);
+    border: none;
+    color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: 700;
+    box-shadow:  0 3px 30px  var(--pale-orange);
+}
+
 .header {
     display: flex;
     margin: auto;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top: 30px;
+    padding-top: 25px;
     border-bottom: 2px solid var(--light-grayish-blue);
 }
 @media screen and (max-width: 800px) {
@@ -56,6 +68,7 @@
     display: flex;
     align-items: flex-start;
     gap: 50px;
+    padding-top:10px;
 }
 
 .header__mobile-menu {
@@ -95,7 +108,7 @@
 }
 
 .nav__link {
-    padding-bottom: calc(60px - 3px);
+    padding-bottom: calc(50px - 3px);
     text-decoration: none;   
     color: var(--grayish-blue); 
 }
@@ -112,7 +125,7 @@
 }
 
 .profile__avatar {
-    width: 50px;
+    width: 55px;
     border: 3px solid var(--Orange);
     border-radius: 50px;
 }
@@ -123,6 +136,117 @@
         width: 25px;
     } 
 }
+
+.profile__cart {
+    cursor: pointer;
+}
+
+.cart { 
+    display: none;
+    position: absolute;  
+    width: 300px;
+    top:95px;
+    right: 0;
+    box-shadow: 0px 3px 26px -3px rgb(0 0 0 / 8%);
+    z-index: 9;
+    border-radius: 5px; 
+    z-index: 7;
+    background-color: white;
+}
+
+.cart_active {
+    display: block;
+}
+.cart__title {
+    padding: 20px 20px;
+    border-bottom: 2px solid var(--light-grayish-blue);
+    font-size: 16px;
+}
+
+.cart__body {
+    display: none;
+    padding: 20px 10px 20px;
+    min-height: 150px;  
+}
+
+.cart__body-active {
+    display: grid;
+}
+
+.cart__empty {
+    display: none;    
+}
+
+.cart__empty-active {
+    display: block;    
+}
+
+.cart__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.cart__item-img{
+    max-width: 50px;
+    border-radius: 5px;
+}
+
+.cart__item-title{
+    font-size: 14px;
+    color: var(--grayish-blue)
+}
+
+.cart__item-price {
+    display: flex;
+    gap: 2px;
+    font-size: 14px;
+    
+}
+
+.badge{
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+    color: white;
+    line-height: 0.6;
+    border: solid var(--Orange);
+    border-radius: 60%;
+    width: 15px;
+    background: var(--Orange);
+    position: absolute;
+    top: 35px;
+    right: 83px; 
+    display: none; 
+    padding: 2px;
+    box-sizing: content-box;
+}
+
+.badge-active{
+    display:block;
+}
+
+.cart__item-total {
+    color: black;
+    font-weight: 700;
+}
+
+.cart__chackout-btn {
+    padding: 15px 20px;
+    cursor: pointer; 
+}
+
+.cart__empty{
+    text-align: center;
+    margin: 75px auto;
+    color: var(--grayish-blue)
+}
+
+.cart__item-trash {
+    cursor: pointer;
+}
+
 .product {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -151,10 +275,14 @@
     border-radius: 10px;
 }
 
+.galery__thumbnail:hover {
+    opacity: .3;
+}
+
 .data-box {
     display: grid;
     align-content: center;
-    gap: 30px;
+    gap: 20px;
     max-width:  433px;
 }
 
@@ -169,7 +297,7 @@
 }
 
 .product__name {
-    font-size: 34px;
+    font-size: 44px;
 }
 
 .product__price-area {
@@ -200,7 +328,8 @@
 .product__buttons {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    gap: 10px
+    gap: 10px;
+
 }
 
 .product__quantity {
@@ -216,11 +345,13 @@
 
 .product__quantity-plus {
     margin:  auto 0 auto;
+    cursor: pointer; 
 }
 
 .product__quantity-minus {
     margin:  auto 0 auto;
     height: 25px;
+    cursor: pointer; 
 }
 
 .product__quantity_input::-webkit-inner-spin-button, 
@@ -229,13 +360,12 @@
 }
 
 .product__add-btn {
-    background-color: var(--Orange);
-    border: none;
-    color: #fff;
-    width: 100%;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 20px 15px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer; 
 }
+
 
 .footer__attribution { font-size: 11px; text-align: center; }
 .footer__attribution a { color: hsl(228, 45%, 44%); }

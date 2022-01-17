@@ -27,7 +27,23 @@
   </nav>
 </div>
     <div class="profile">
+      <span class="badge"></span>
       <img class="profile__cart" src="./images/icon-cart.svg" alt="cart" >
+      <div class="cart">
+        <h2 class="cart__title">Cart</h2>
+        <div class="cart__body">
+          <div class="cart__item">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="" class="cart__item-img">
+            <div class="cart__item-body">
+              <p class="cart__item-title"></p>
+              <div class="cart__item-price">$<span class="cart__item-single"></span><span class="cart__item-multy">&nbsp;x&nbsp;</span><span class="cart__item-quantitiy">0</span>&nbsp;<span class="cart__item-total"></span></div>
+            </div>
+            <img src="./images/icon-delete.svg" alt="" class="cart__item-trash">
+          </div>
+          <button class="btn cart__chackout-btn">Chackout</button>
+        </div>
+        <div class="cart__empty">Your cart is empty</div>
+      </div>
       <img class="profile__avatar" src="./images/image-avatar.png" alt="avatar">
     </div>
 </hrader>
@@ -50,7 +66,7 @@
          <p class="product_desc">These low-profile sneakers are your perfect casual wear companion. Featuring a 
           durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
          <div class="product__price-area">
-           <div class="product__sale-price">$125.00<span class="product__dicount">%50</span></div>
+           <div class="product__sale-price">$<span class="product__total-price">125.00</span><span class="product__dicount">%50</span></div>
            <div class="product__price">$250.00</div>
            
          </div>
@@ -62,7 +78,7 @@
             
            </div>
           
-           <input class="product__add-btn" type="button" value="Add to cart">
+           <button class="btn product__add-btn" type="button">Add to cart</button>
          </div>
     </div>
   </section>
