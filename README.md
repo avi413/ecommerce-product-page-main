@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot of the E-commerce product page coding challenge](./screenshot.jpg)
+![screenshot of the E-commerce product page coding challenge](./screenshot.JPG)
 ### Links
 
 - Solution URL: [solution](https://github.com/avi413/ecommerce-product-page-main.git)
